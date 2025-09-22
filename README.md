@@ -1,60 +1,190 @@
-# AutoGrade Python 助教项目
+# AutoGrade - Python 作业自动评分系统
 
-## 项目简介
+> 基于大语言模型的智能评分工具，为高校编程课程设计
 
-AutoGrade 是一个基于大语言模型的 Python 作业自动评分工具，适用于高校编程课程助教自动批改学生作业。
+## ✨ 核心特性
 
-## 主要功能
-- 自动读取学生提交的 Python 文件
-- 支持自定义评分标准
-- 通过大模型 API 自动评分
-- 评分进度条显示
-- 结果自动保存到 `results.txt`
-- 兼容中文编码
+- 🚀 **智能评分** - 基于AI大语言模型，准确评估代码质量
+- ⚡ **并发处理** - 多线程并发评分，显著提升效率
+- 🔄 **断点续批** - 支持中断恢复，避免重复工作
+- 🔍 **相似度检测** - 自动识别抄袭和代码相似性
+- 📊 **统计分析** - 生成分数分布和详细统计报告
+- 📁 **多格式导出** - 支持CSV、Excel、JSON、Markdown
+- 🗂️ **文件管理** - 智能清理功能，保持工作目录整洁
 
-## 项目结构
-```
-├── autograde.py         # 主程序
-├── config.json          # 配置文件（API密钥、模型等）
-```
-
-## 使用方法
+## 🛠 快速开始
 
 ### 1. 环境准备
-- Python 3.8 及以上
-- 推荐使用虚拟环境（venv）
-- 安装依赖：
-  ```bash
-  pip install openai tqdm
-  ```
+```bash
+# Python 3.8+ 环境
+pip install -r requirements.txt
+```
 
-### 2. 配置文件
-编辑 `config.json`，示例：
+### 2. 配置设置
+编辑 `config.json`：
 ```json
 {
-    "base_path": "C:/Path/to/your/project",
-    "api_key": "你的API密钥",
-    "base_url": "https://api.deepseek.com/v1", // 请根据实际使用的模型服务填写
-    "model": "deepseek-chat" // 请根据实际使用的模型服务填写
+    "base_path": "C:\\path\\to\\homework\\folder",
+    "api_key": "your-api-key",
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "max_workers": 5,
+    "similarity_threshold": 0.85
 }
 ```
-- `base_path`：工作文件夹路径，需包含 `submissions` 子文件夹（存放学生作业）和 `template.py` 标准答案文件。
-- `api_key`、`base_url`、`model`：请根据实际使用的模型服务填写。
 
-### 3. 文件组织
-- `submissions/` 文件夹下每个学生的作业文件命名格式建议为 `学号_其他信息.py`，如 `20231234_hw1.py`。
-- `template.py` 为标准答案。
-
-### 4. 运行
-在项目目录下执行：
+### 3. 开始评分
 ```bash
+# 基础使用
 python autograde.py
+
+# 查看所有选项
+python autograde.py --help
 ```
-运行后会自动显示进度条，评分结果保存至 `results.txt`。
 
+## 📋 命令行参数
 
-## 常见问题
-- 若 `submissions` 文件夹或 `template.py` 不存在，程序会提示并跳过。
-- 若 API 调用失败，结果会显示错误信息。
-- 支持 Windows 路径和中文文件名。
+### 🗑️ 清理模式（独立操作）
+```bash
+python autograde.py --clean base      # 清理base_path目录
+python autograde.py --clean local     # 清理当前目录
+python autograde.py --clean all       # 清理所有目录
+```
 
+### 📊 评分模式
+```bash
+# 基础选项
+python autograde.py                     # 正常评分
+python autograde.py --resume           # 从断点继续
+python autograde.py --parallel 4       # 并发评分(4线程)
+
+# 导出选项
+python autograde.py --export excel     # 导出Excel(默认)
+python autograde.py --export all       # 导出所有格式
+
+# 特殊选项
+python autograde.py --student 12345    # 只评分特定学生
+python autograde.py --no-similarity    # 跳过相似度检测
+python autograde.py --retry-failed     # 重试失败作业
+```
+
+### 🔧 组合使用
+```bash
+# 并发 + 断点续批 + 全格式导出
+python autograde.py --parallel 5 --resume --export all
+
+# 并发20线程 + 断点续批 + excel导出
+python autograde.py --parallel 20 --resume --export excel
+
+# 重试失败 + 自定义标准
+python autograde.py --retry-failed --criteria custom.json
+```
+
+## 📁 项目结构
+
+```
+autograde/
+├── autograde.py              # 主程序
+├── grader.py                # 评分核心
+├── similarity_checker.py    # 相似度检测
+├── progress_manager.py      # 进度管理
+├── score_analyzer.py        # 统计分析
+├── export_utils.py          # 导出工具
+├── config.json              # 配置文件
+├── grading_criteria_example.json  # 评分标准示例
+└── requirements.txt         # 依赖列表
+```
+
+## 📊 输出文件说明
+
+### 评分结果（保存在base_path目录）
+- `grading_results_*.csv` - CSV格式结果
+- `grading_report_*.xlsx` - Excel报告（多工作表）
+- `grading_data_*.json` - JSON完整数据
+- `grading_report_*.md` - Markdown报告
+
+### 统计分析
+- `statistics_report.txt` - 统计摘要
+- `score_distribution.png` - 分数分布图
+
+### 进度和日志
+- `grading_progress.json` - 进度记录
+- `grading_*.log` - 运行日志
+
+## 🎯 自定义评分标准
+
+创建JSON配置文件（参考 `grading_criteria_example.json`）：
+
+```json
+{
+  "score_ranges": {
+    "excellent": {"min": 95, "max": 100, "probability": 0.7},
+    "good": {"min": 80, "max": 94, "probability": 0.8}
+  },
+  "deduction_items": {
+    "no_error_handling": -5,
+    "poor_code_style": -2
+  },
+  "bonus_items": {
+    "elegant_solution": 3
+  }
+}
+```
+
+## 🔍 相似度检测
+
+自动检测代码相似性：
+- **文本相似度** - 基于编辑距离
+- **结构相似度** - AST语法树分析
+- **标识符相似度** - 变量名对比
+
+超过阈值的作业对将在Excel报告中标出。
+
+## 🚀 性能优化
+
+1. **并发设置**: 根据API限制调整 `--parallel` 参数（建议3-8）
+2. **断点续批**: 长任务使用 `--resume` 避免重复工作
+3. **智能缓存**: 相同代码自动复用评分结果
+4. **清理维护**: 定期使用 `--clean` 清理临时文件
+
+## 🐛 常见问题
+
+| 问题 | 解决方案 |
+|------|----------|
+| API超时 | 调整config.json中的timeout值 |
+| 内存不足 | 减少并发数或分批处理 |
+| 编码错误 | 程序已自动处理，检查文件编码 |
+| 导入错误 | 确保在项目根目录运行 |
+
+## 📈 工作流程
+
+1. **准备阶段**: 配置文件设置、环境检查
+2. **扫描阶段**: 自动发现作业文件、学生ID识别
+3. **评分阶段**: 并发评分、进度跟踪、错误处理
+4. **检测阶段**: 相似度分析、抄袭识别
+5. **分析阶段**: 统计计算、图表生成
+6. **导出阶段**: 多格式报告生成
+7. **清理阶段**: 临时文件清理（可选）
+
+## 📝 更新日志
+
+### v2.0 - 全面重构版本
+- ✅ 模块化架构重构
+- ✅ 并发评分支持
+- ✅ 智能文件清理功能
+- ✅ 断点续批机制
+- ✅ 相似度检测集成
+- ✅ 统计分析增强
+- ✅ 命令行参数优化
+
+---
+
+## 📄 许可证
+
+MIT License - 详见LICENSE文件
+
+## 🤝 支持
+
+- 提交Issue报告问题
+- 查看Wiki获取详细文档
+- 贡献代码改进功能
