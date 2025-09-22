@@ -33,7 +33,73 @@ pip install -r requirements.txt
 }
 ```
 
-### 3. 开始评分
+### 3. 目录结构设置
+
+在 `base_path` 指定的目录下，需要按以下结构组织文件：
+
+```
+base_path/
+├── template.py              # 🔑 必需：参考答案文件
+├── submissions/             # 🔑 必需：学生作业文件夹
+│   ├── 20230001_homework.py # 格式：学号_其他信息.py
+│   ├── 20230002_hw1.py      # 程序会自动从文件名提取学号
+│   └── 20230003_作业1.py    # 支持中文文件名
+├── reports/                 # 📁 自动创建：评分结果输出目录
+│   ├── grading_results_*.csv
+│   ├── grading_report_*.xlsx
+│   ├── statistics_report.txt
+│   └── score_distribution.png
+└── grading_progress.json    # 📁 自动创建：进度记录文件
+```
+
+#### 📝 文件要求说明
+
+1. **`template.py`** (必需)
+   - 包含标准答案的Python代码
+   - 作为AI评分的参考标准
+   - 确保代码格式规范、逻辑清晰
+
+2. **`submissions/`** 文件夹 (必需)
+   - 存放所有学生提交的作业文件
+   - 文件名格式：`学号_其他信息.py`
+   - 支持下划线分隔，程序会自动提取学号部分
+   - 示例：`2023001_作业1.py` → 学号：`2023001`
+
+3. **`reports/`** 文件夹 (自动创建)
+   - 程序运行时自动创建
+   - 存放所有评分结果和统计报告
+   - 包含多种格式的导出文件
+
+#### 💡 快速设置示例
+
+假设您的作业目录为 `C:\homework\python_hw1`：
+
+1. **创建目录结构**：
+   ```bash
+   mkdir C:\homework\python_hw1\submissions
+   ```
+
+2. **放置参考答案**：
+   将标准答案保存为 `C:\homework\python_hw1\template.py`
+
+3. **放置学生作业**：
+   将学生文件放入 `C:\homework\python_hw1\submissions\` 目录
+
+4. **修改配置**：
+   ```json
+   {
+     "base_path": "C:\\homework\\python_hw1",
+     "api_key": "your-api-key-here",
+     ...
+   }
+   ```
+
+5. **运行评分**：
+   ```bash
+   python autograde.py --parallel 5 --export all
+   ```
+
+### 4. 开始评分
 ```bash
 # 基础使用
 python autograde.py
@@ -41,6 +107,16 @@ python autograde.py
 # 查看所有选项
 python autograde.py --help
 ```
+
+## ⚠️ 重要提醒
+
+1. **首次使用前**，请确保 `base_path` 目录下已创建：
+   - ✅ `template.py` - 参考答案文件  
+   - ✅ `submissions/` - 学生作业文件夹
+   
+2. **学生文件命名**：建议使用 `学号_作业名.py` 格式，便于自动识别
+
+3. **API配置**：确保API密钥有效且有足够的调用额度
 
 ## 📋 命令行参数
 
