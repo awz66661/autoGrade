@@ -1,0 +1,390 @@
+{
+  "course_id": "108137",
+  "source": "https://elearning.fudan.edu.cn/courses/108137/users",
+  "students": [
+    {
+      "student_id": "21300270019",
+      "name": "白展铭",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "21301170003",
+      "name": "潘奕霖",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300110017",
+      "name": "刘墨涵",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300110038",
+      "name": "王子玥",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300110079",
+      "name": "郭芸芸",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300120184",
+      "name": "徐雨菡",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300120186",
+      "name": "郑昕媛",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300160071",
+      "name": "阿尔娜·阿布拉义",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300180072",
+      "name": "张源宏",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300270038",
+      "name": "陈可心",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300270063",
+      "name": "胡佳",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300270083",
+      "name": "金竹馨",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300270086",
+      "name": "刘一帜",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300276006",
+      "name": "何俊明",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300500007",
+      "name": "钱程",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22300680043",
+      "name": "姚依涛",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22301020014",
+      "name": "朱喆",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22301020074",
+      "name": "赵雨欣",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22301020100",
+      "name": "窦羽童",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22301050273",
+      "name": "米玛央宗",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22301170044",
+      "name": "胡小飞",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22302010086",
+      "name": "徐鹏",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22307080005",
+      "name": "梁孜鑫",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22307080035",
+      "name": "吴晨萌",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22307090088",
+      "name": "王一可",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22307090171",
+      "name": "钱玥",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22307090195",
+      "name": "德吉",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "22307150023",
+      "name": "王鑫",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23300130003",
+      "name": "於桐",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23300160086",
+      "name": "刘壹",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23300180065",
+      "name": "王垣策",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23300220023",
+      "name": "谢天翔",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23300270052",
+      "name": "潘婧恬",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23300270087",
+      "name": "王佳音",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23300270089",
+      "name": "赵晗羽",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23307110029",
+      "name": "陆宇轩",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "23307110313",
+      "name": "王怀俊",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "24301020009",
+      "name": "王泽扬",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25213050074",
+      "name": "敖伟智",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25300306012",
+      "name": "陈凯",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25300740020",
+      "name": "黄思瑞",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080003",
+      "name": "王奕帆",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080009",
+      "name": "俞金",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080013",
+      "name": "陈宇阳",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080017",
+      "name": "沈思屹",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080029",
+      "name": "叶焜",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080031",
+      "name": "王梓畅",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080053",
+      "name": "刘双浪",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080064",
+      "name": "曾高俊",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080074",
+      "name": "徐紫琳",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080075",
+      "name": "王雨桐",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080076",
+      "name": "王语欣",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080077",
+      "name": "林泱含",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25303080083",
+      "name": "汤贻清",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25340700004",
+      "name": "王盛冬",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25340700005",
+      "name": "吴致达",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25340700006",
+      "name": "燕鹏亦",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25340700008",
+      "name": "宇文桢",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25340700021",
+      "name": "罗少钧",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25340700030",
+      "name": "王可欣",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25803080108",
+      "name": "邵海彬",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25803080110",
+      "name": "黄钰犀",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25803080113",
+      "name": "严雯珺",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    },
+    {
+      "student_id": "25803080114",
+      "name": "李丹妮",
+      "source": "elearning_static",
+      "synced_at": "2026-05-14T14:54:54"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[project]
+name = "autograde-fudan"
+version = "0.2.0"
+description = "DeepSeek-powered grading CLI for Fudan Python assignments"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib>=3.8.0",
+    "openai>=1.0.0",
+    "openpyxl>=3.1.0",
+    "pandas>=2.0.0",
+    "pytest>=8.0.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.66.0",
+]
+
+[project.scripts]
+autograde = "autograde_tool.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.hatch.build.targets.wheel]
+packages = ["autograde_tool"]

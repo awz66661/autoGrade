@@ -1,6 +1,12 @@
 # 配置和日志文件
 config.json
+.env
+.env.*
+!.env.example
 *.log
+.autograde/
+playwright-report/
+test-results/
 
 # 导出文件
 grading_results_*.csv
@@ -10,9 +16,11 @@ grading_data_*.json
 statistics_report.txt
 score_distribution.png
 grading_progress.json
+reports/
 
 # Python缓存文件
 __pycache__/
+.pytest_cache/
 *.pyc
 *.pyo
 *.pyd
